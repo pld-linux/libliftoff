@@ -3,6 +3,7 @@
 %bcond_without	static_libs	# static library
 
 Summary:	Lightweight KMS plane library
+Summary(pl.UTF-8):	Lekka biblioteka płaszczyzn KMS
 Name:		libliftoff
 Version:	0.4.1
 Release:	1
@@ -25,8 +26,15 @@ in your way. Users create "virtual planes" called layers, set KMS
 properties on them, and libliftoff will pick hardware planes for these
 layers if possible.
 
+%description -l pl.UTF-8
+libliftoff ułatwia używanie płaszczyzn KMS z przestrzeni użytkownika.
+Użytkownicy tworzą "wirtualne płaszczyzny" zwane warstwami, ustawiają
+im właściwości KMS, a libliftoff w miarę możliwości pobiera sprzętowe
+płaszczyzny dla tych warstw.
+
 %package devel
 Summary:	Header files for libliftoff library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libliftoff
 Group:		Development/Libraries
 Requires:	%{name}%{?_isa} = %{version}-%{release}
 Requires:	libdrm-devel >= 2.4.108
@@ -34,13 +42,20 @@ Requires:	libdrm-devel >= 2.4.108
 %description devel
 Header files for libliftoff library.
 
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki libliftoff.
+
 %package static
 Summary:	Static libliftoff library
+Summary(pl.UTF-8):	Statyczna biblioteka libliftoff
 Group:		Development/Libraries
 Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 
 %description static
 Static libliftoff library.
+
+%description static -l pl.UTF-8
+Statyczna biblioteka libliftoff.
 
 %prep
 %setup -q
